@@ -1,20 +1,15 @@
 const express  = require('express')
-const sequelize = require('./src/configs/sequelize')
-const Possession = require('./src/models/Possession')
-const Batiment = require('./src/models/Batiment')
-const Vehicle = require('./src/models/Vehicle')
-const Terrain = require('./src/models/Terrain')
+// const sequelize = require('./src/configs/sequelize')
+// const Fixed = require('./src/models/Fixed')
+
+
+
 const app = express()
 
-const q  = async()=>{
-    if(sequelize) {
-        // Possession.sync({force:true})
-        // Batiment.sync({force:true})
-        // Vehicle.sync({force:true})
-        Terrain.sync()
-    }
-}
-q()
+// const q  = async()=>{
+//     if(sequelize) Fixed.sync()
+// }
+// q()
 
 
 const PORT = process.env.SERVER_PORT ?? 3000 
