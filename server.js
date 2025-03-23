@@ -3,6 +3,7 @@ const sequelize = require('./src/configs/sequelize')
 const Possession = require('./src/models/Possession')
 const Batiment = require('./src/models/Batiment')
 const Vehicle = require('./src/models/Vehicle')
+const Terrain = require('./src/models/Terrain')
 const app = express()
 
 const q  = async()=>{
@@ -10,6 +11,7 @@ const q  = async()=>{
         // Possession.sync({force:true})
         // Batiment.sync({force:true})
         // Vehicle.sync({force:true})
+        Terrain.sync()
     }
 }
 q()
