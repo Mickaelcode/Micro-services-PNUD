@@ -57,7 +57,7 @@ exports.deletePossession = async (req, res) => {
       res.status(404).json({ msg });
       return;
     }
-    await Possession.destroy();
+    await possession.destroy();
     msg = `possession(${id} deleted successfully)`;
     res.status(200).json({ msg });
   } catch (error) {
