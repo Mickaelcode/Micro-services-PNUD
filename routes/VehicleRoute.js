@@ -1,5 +1,5 @@
-const express = require("express");
-const vehicleRoute = express.vehicleRoute();
+const {Router} = require("express");
+const vehicleRoute =Router();
 const VehicleController = require("../controllers/VehicleController");
 
 vehicleRoute.post("/", VehicleController.createVehicle);
