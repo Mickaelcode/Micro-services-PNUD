@@ -1,0 +1,29 @@
+{
+  "name": "micro-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mickaelcode/Micro-services-PNUD.git"
+  },
+  "author": "Mickael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mickaelcode/Micro-services-PNUD/issues"
+  },
+  "homepage": "https://github.com/Mickaelcode/Micro-services-PNUD#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.14.1",
+    "sequelize": "^6.37.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
