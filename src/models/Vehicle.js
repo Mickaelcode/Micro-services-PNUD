@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 const Possession = require("./Possession");
 
 const Vehicle = sequelize.define("vehicle", {
-  vehicle_id: {
+    id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     autoIncrement: true,

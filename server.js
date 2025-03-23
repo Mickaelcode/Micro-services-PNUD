@@ -1,14 +1,19 @@
 const express  = require('express')
-// const sequelize = require('./src/configs/sequelize')
+const Possession = require('./src/models/Possession')
+const Batiment = require('./src/models/Batiment')
+const sequelize = require('./src/configs/sequelize')
 // const Fixed = require('./src/models/Fixed')
 
 
 
 const app = express()
 
-// const q  = async()=>{
-//     if(sequelize) Fixed.sync()
-// }
+const q  = async()=>{
+    if(sequelize) {
+        Batiment.sync({force:true})
+        // Batiment.sync({alter:true})
+    }
+}
 // q()
 
 

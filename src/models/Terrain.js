@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 const Possession = require("./Possession");
 
 const Terrain = sequelize.define("terrain", {
-  terrain_id: {
+    id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,

@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 const Possession = require("./Possession");
 
 const Fixed = sequelize.define("fixed", {
-  fixed_id: {
+    id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
