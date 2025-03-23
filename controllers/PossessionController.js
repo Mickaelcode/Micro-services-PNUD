@@ -66,7 +66,7 @@ exports.deletePossession = async (req, res) => {
   }
 };
 
-exports.getPossessionById = async (req, req) => {
+exports.getPossessionById = async (req, res) => {
   try {
     const { id } = req.params;
     const possession = await Possession.findByPk(id);
