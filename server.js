@@ -1,6 +1,6 @@
 const express  = require('express')
-const router = require('./routes/PossessionRoute')
-const cors = require('cors')
+const cors = require('cors');
+const possessionRoute = require('./routes/PossessionRoute');
 
 
 
@@ -9,7 +9,7 @@ const app = express()
 app.use(cors());
 app.use(express.json());
 
-app.use('/possession',router)
+app.use('/possession',possessionRoute)
 
 
 const PORT = process.env.SERVER_PORT ?? 3000 

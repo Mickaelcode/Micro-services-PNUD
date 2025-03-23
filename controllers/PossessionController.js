@@ -21,7 +21,7 @@ exports.getAllPossession = async (req, res) => {
   try {
     const possessions = await Possession.findAll();
     msg = possessions
-      ? `here is lists of possessions(${possessions.lengh})`
+      ? `here is lists of possessions(${possessions.length})`
       : "Empty";
     res.status(200).json({ msg, possessions });
   } catch (error) {
