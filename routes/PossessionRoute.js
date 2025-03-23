@@ -1,8 +1,12 @@
 const {Router} = require('express')
-const { getAllPossession } = require('../controllers/PossessionController')
+const { getAllPossession, createPossession, updatePossession, deletePossession, getPossessionById } = require('../controllers/PossessionController')
 
-const router = Router()
+const possessionRoute = Router()
 
-router.get('/',getAllPossession)
+possessionRoute.get('/',getAllPossession)
+possessionRoute.post('/',createPossession)
+possessionRoute.put('/:id',updatePossession)
+possessionRoute.delete('/:id',deletePossession)
+possessionRoute.get('/:id',getPossessionById)
 
-module.exports =router
+module.exports =possessionRoute
