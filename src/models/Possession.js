@@ -2,7 +2,7 @@ const sequelize = require('../configs/sequelize')
 const {DataTypes} = require('sequelize')
 
 const Possession = sequelize.define("possession",{
-    id:{
+    possession_id:{
         type:DataTypes.INTEGER,
         allowNull:false,
         autoIncrement:true,

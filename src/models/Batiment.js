@@ -1,12 +1,17 @@
 const sequelize = require("../configs/sequelize");
 const { DataTypes } = require("sequelize");
+const Possession = require("./Possession");
 
 const Batiment = sequelize.define("batiment", {
-  id: {
+  batiment_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
+  },
+  possession_id:{
+    type:DataTypes.INTEGER,
+    allowNull:false
   },
   lot: {
     type: DataTypes.STRING,
@@ -34,5 +39,13 @@ const Batiment = sequelize.define("batiment", {
     allowNull: false,
   },
 });
+
+Possession.hasMany(Batiment,{
+    foreignKey:"possession_id",
+    onDelete:"CASCADE"
+})
+Batiment.belongsTo(Possession,{
+    foreignKey:"possession_id"
+})
 
 module.exports = Batiment;

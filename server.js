@@ -1,12 +1,16 @@
 const express  = require('express')
-const Possession = require('./src/models/Possession')
 const sequelize = require('./src/configs/sequelize')
+const Possession = require('./src/models/Possession')
+const Batiment = require('./src/models/Batiment')
 const app = express()
 
 const q  = async()=>{
-    if(sequelize) Possession.sync()
+    if(sequelize) {
+        Possession.sync({force:true})
+        Batiment.sync({force:true})
+    }
 }
-q()
+// q()
 
 
 const PORT = process.env.SERVER_PORT ?? 3000 
